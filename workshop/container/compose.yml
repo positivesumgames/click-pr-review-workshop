@@ -1,0 +1,17 @@
+services:
+  review:
+    build:
+      context: ..
+      dockerfile: container/Dockerfile
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    volumes: ["../:/workshop:ro"]
+    tmpfs: ["/state", "/tmp"]
+    working_dir: /state
+    environment:
+      KIROCREW_HOME: /state/crew
+      WORKSHOP_ISOLATED: "1"
+      PYTHONDONTWRITEBYTECODE: "1"
+    stdin_open: true
+    tty: true

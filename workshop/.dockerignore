@@ -1,0 +1,7 @@
+.git
+.intent
+.work
+.venv
+.env*
+__pycache__
+*.egg-info

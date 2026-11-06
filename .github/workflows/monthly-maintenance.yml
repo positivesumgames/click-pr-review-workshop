@@ -1,0 +1,31 @@
+name: Monthly workshop reminder
+on:
+  schedule:
+    - cron: "17 16 1 * *"
+  workflow_dispatch:
+permissions:
+  contents: read
+  issues: write
+concurrency:
+  group: workshop-monthly-reminder
+  cancel-in-progress: false
+jobs:
+  remind:
+    if: github.repository == 'positivesumgames/click-pr-review-workshop'
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: "3.12"
+      - name: Remind only; no upstream fetching or automatic refresh PR
+        working-directory: workshop
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PYTHONPATH: src
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: python scripts/monthly_reminder.py

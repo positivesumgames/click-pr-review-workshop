@@ -1,62 +1,9 @@
-<div align="center"><img src="https://raw.githubusercontent.com/pallets/click/refs/heads/stable/docs/_static/click-name.svg" alt="" height="150"></div>
+# Click PR-review workshop
 
-# Click
+Independent teaching template; not a GitHub fork of Click.
 
-Click is a Python package for creating beautiful command line interfaces
-in a composable way with as little code as necessary. It's the "Command
-Line Interface Creation Kit". It's highly configurable but comes with
-sensible defaults out of the box.
+Choose Use this template, default branch only, then create exercise branches from your own main. All practice PRs target your repository, never upstream.
 
-It aims to make the process of writing command line tools quick and fun
-while also preventing any frustration caused by the inability to
-implement an intended CLI API.
+Start with [prework](workshop/PREWORK.md), then the [60-minute core](workshop/WORKSHOP.md) and optional [30-minute advanced lab](workshop/ADVANCED.md).
 
-Click in three points:
-
--   Arbitrary nesting of commands
--   Automatic help page generation
--   Supports lazy loading of subcommands at runtime
-
-
-## A Simple Example
-
-```python
-import click
-
-@click.command()
-@click.option("--count", default=1, help="Number of greetings.")
-@click.option("--name", prompt="Your name", help="The person to greet.")
-def hello(count, name):
-    """Simple program that greets NAME for a total of COUNT times."""
-    for _ in range(count):
-        click.echo(f"Hello, {name}!")
-
-if __name__ == '__main__':
-    hello()
-```
-
-```
-$ python hello.py --count=3
-Your name: Click
-Hello, Click!
-Hello, Click!
-Hello, Click!
-```
-
-
-## Donate
-
-The Pallets organization develops and supports Click and other popular
-packages. In order to grow the community of contributors and users, and
-allow the maintainers to devote more time to the projects, [please
-donate today][].
-
-[please donate today]: https://palletsprojects.com/donate
-
-## Contributing
-
-See our [detailed contributing documentation][contrib] for many ways to
-contribute, including reporting issues, requesting features, asking or answering
-questions, and making PRs.
-
-[contrib]: https://palletsprojects.com/contributing/
+Enter `workshop/` before running workshop commands. See [maintainer refresh and reminder](workshop/MAINTAINER.md) and [attribution](workshop/ATTRIBUTION.md). Click retains its BSD license; workshop material is Apache-2.0. Review-ready never authorizes merge.

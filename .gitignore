@@ -7,3 +7,10 @@ htmlcov/
 .tox/
 docs/_build/
 .venv/
+
+# Workshop state
+workshop/.work/
+workshop/.venv/
+workshop/.ruff_cache/
+workshop/.pytest_cache/
+workshop/src/*.egg-info/

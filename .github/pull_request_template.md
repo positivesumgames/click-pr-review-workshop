@@ -1,25 +1,13 @@
-<!--
-Before opening a PR, open a ticket describing the issue or feature the
-PR will address. An issue is not required for fixing typos in
-documentation, or other simple non-code changes.
+## Intent
 
-Replace this comment with a description of the change. Describe how it
-addresses the linked ticket.
--->
+What behavior should change, and what must stay unchanged?
 
-<!--
-Link to relevant issues or previous PRs, one per line. Use "fixes" to
-automatically close an issue.
+## Verification
 
-fixes #<issue number>
--->
+Name the regression test, its failure before the repair, and its result after.
 
-<!--
-Ensure each step in CONTRIBUTING.rst is complete, especially the following:
+## Review evidence
 
-- Add tests that demonstrate the correct behavior of the change. Tests
-  should fail without the change.
-- Add or update relevant docs, in the docs folder and in code.
-- Add an entry in CHANGES.rst summarizing the change and linking to the issue.
-- Add `.. versionchanged::` entries in any relevant code docs.
--->
+Publish same-head independent correctness and boundary reviews with the workshop CLI.
+Give each finding one test-backed disposition. Review-ready does not authorize merge.
+All practice PRs target your own generated repository, never pallets/click.

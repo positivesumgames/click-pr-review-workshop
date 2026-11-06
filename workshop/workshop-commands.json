@@ -1,0 +1,15 @@
+[
+  {"name":"Ready snapshot","args":["-m","pr_review_workshop","evaluate","--fixture","tests/fixtures/ready.json"],"expected_exit":0},
+  {"name":"Stale evidence blocks","args":["-m","pr_review_workshop","evaluate","--fixture","tests/fixtures/stale-review.json"],"expected_exit":20},
+  {"name":"Pending is not green","args":["-m","pr_review_workshop","evaluate","--fixture","tests/fixtures/pending-check.json"],"expected_exit":10},
+  {"name":"Reported Click behavior","args":["scripts/case_checkpoint.py","baseline","--require-intact"],"expected_exit":1},
+  {"name":"Partial fix boundary failure","args":["scripts/case_checkpoint.py","partial","--require-intact"],"expected_exit":1},
+  {"name":"Labeled repaired candidate","args":["scripts/case_checkpoint.py","repaired","--require-intact"],"expected_exit":0},
+  {"name":"Review packet","args":["-m","pr_review_workshop","packet","--fixture","tests/fixtures/ready.json"],"expected_exit":0},
+  {"name":"Cost estimate","args":["-m","pr_review_workshop","estimate"],"expected_exit":0},
+  {"name":"No-cost two-provider replay","args":["-m","pr_review_workshop","review","--packet",".work/packet.json","--mode","replay"],"expected_exit":0},
+  {"name":"Export separate reviews","args":["scripts/export_reviews.py"],"expected_exit":0},
+  {"name":"Deliberately false-green learner starter","args":["exercises/check_gate.py"],"expected_exit":1},
+  {"name":"Unimplemented capstone","args":["exercises/check_capstone.py"],"expected_exit":1},
+  {"name":"Container configuration only","args":["scripts/container_preflight.py"],"expected_exit":0}
+]

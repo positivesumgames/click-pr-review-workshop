@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "required_lenses": {
+    "correctness": "Find reachable correctness defects and verify the claimed fix against its intent.",
+    "boundaries": "Challenge the fix at narrow widths, long tokens, Unicode, and unchanged behavior."
+  },
+  "required_checks": ["Workshop Tests"],
+  "protected_prefixes": [
+    ".github/", "workshop/src/", "workshop/config/", "workshop/scripts/",
+    "workshop/pyproject.toml", "workshop/tests/"
+  ],
+  "max_cycles": 12,
+  "max_runtime_seconds": 900,
+  "max_unchanged_cycles": 3
+}

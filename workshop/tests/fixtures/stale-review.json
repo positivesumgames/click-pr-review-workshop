@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "complete": true,
+  "repository": "learner/click-pr-review-workshop",
+  "publisher_can_write": true,
+  "pull_request": {
+    "number": 1, "state": "OPEN", "isDraft": false, "mergeable": "MERGEABLE",
+    "headRefOid": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "baseRefOid": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "baseRefName": "main", "reviewDecision": "",
+    "headRepository": {"nameWithOwner": "learner/click-pr-review-workshop"},
+    "baseRepository": {"nameWithOwner": "learner/click-pr-review-workshop"}
+  },
+  "intent": "Fix the reported hyphen-wrapping defect.",
+  "diff": "diff --git a/src/click/formatting.py b/src/click/formatting.py\n+        break_on_hyphens=False,\n",
+  "changed_files": ["src/click/formatting.py"],
+  "checks": [{"name":"Workshop Tests","id":1,"attempt":1,"headSha":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","status":"completed","conclusion":"success","trusted_workflow":true}],
+  "threads": [],
+  "comments": [{
+    "id": 1,
+    "user": {"login": "learner"},
+    "body": "<!-- workshop-review:v1 -->\n```json\n{\"schema_version\":1,\"packet\":{\"schema_version\":1,\"repository\":\"learner/click-pr-review-workshop\",\"pr\":1,\"base_sha\":\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\",\"head_sha\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"intent\":\"Fix the reported hyphen-wrapping defect.\",\"diff\":\"diff --git a/src/click/formatting.py b/src/click/formatting.py\\n+        break_on_hyphens=False,\\n\",\"input_digest\":\"d4dbf67d5e6e17724de40bfec8d893bbb204e3d91fb01c5aeaae922867704486\"},\"reviews\":[{\"schema_version\":1,\"head_sha\":\"cccccccccccccccccccccccccccccccccccccccc\",\"base_sha\":\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\",\"input_digest\":\"d4dbf67d5e6e17724de40bfec8d893bbb204e3d91fb01c5aeaae922867704486\",\"lens\":\"correctness\",\"phase\":\"independent\",\"status\":\"completed\",\"run_id\":\"correctness-run\",\"reviewer\":\"manual:correctness\",\"read_only\":true,\"findings\":[]},{\"schema_version\":1,\"head_sha\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"base_sha\":\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\",\"input_digest\":\"d4dbf67d5e6e17724de40bfec8d893bbb204e3d91fb01c5aeaae922867704486\",\"lens\":\"boundaries\",\"phase\":\"independent\",\"status\":\"completed\",\"run_id\":\"boundaries-run\",\"reviewer\":\"manual:boundaries\",\"read_only\":true,\"findings\":[]}],\"dispositions\":[],\"publisher\":\"learner\"}\n```\n"
+  }]
+}

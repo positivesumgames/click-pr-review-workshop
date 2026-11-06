@@ -1,0 +1,13 @@
+{
+  "workshop_version": "0.1.0",
+  "source_repository": "pallets/click",
+  "source_sha": "8abb77a8432e03ed14a95f972b44f905279415a7",
+  "kirocrew_source_sha": "8dbdf0443c7b2ccea832b343a5b26c86b75524fd",
+  "maintainer_repository": "positivesumgames/click-pr-review-workshop",
+  "distribution": "independent-public-template",
+  "case_issue": 3362,
+  "case_reporter": "Melebius",
+  "case_report": "https://github.com/pallets/click/issues/3362",
+  "timing": {"core_minutes": 60, "advanced_minutes": 30},
+  "replay_provenance": "Authored teaching data; not outputs or usage measured from paid providers."
+}
