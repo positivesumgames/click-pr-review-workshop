@@ -1,0 +1,5 @@
+Synthetic readiness-protocol smoke test.
+
+This branch changes no Click code or workshop control code.
+Its review comments are authored test data, not model or Crew output.
+The PR must be closed without merging after verification.
